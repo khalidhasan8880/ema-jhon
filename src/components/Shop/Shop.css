@@ -1,0 +1,10 @@
+.shop{
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+}
+.main{
+    background-color: aqua;
+}
+.side{
+    background-color: rgb(1, 4, 4);
+}
