@@ -2,10 +2,7 @@ import React from 'react';
 
 const Card = (props) => {
     const {name,ratings,price, seller, id, img } = props.product
-    function addCart(id) {
-        console.log(id);
-    }
-
+   const {addCartHandle } = props;
 
     return (
         <div className="card pb-0 w-96 bg-red-400 shadow-xl">
@@ -23,7 +20,7 @@ const Card = (props) => {
                         <p>Manufacturer : {seller}</p>
                         <p>Rating : {ratings} star</p>
                     </div>
-                    <div  className=' border-t-2 p-2 border-black w-full text-center align-text-bottom' onClick={()=>addCart(id)}>
+                    <div  className=' border-t-2 p-2 border-black w-full text-center align-text-bottom cursor-pointer' onClick={()=>addCartHandle(props.product)}>
                         add to cart
                     </div>
                 </div>
